@@ -1,9 +1,10 @@
 const http= require("http");
+var os = require("os");
 const url = require('url'); 
 const { getComments, searchVideo }= require("./scraping");
 
-const hostname = 'localhost';
-const port = 8000;
+const hostname = os.hostname();
+const port = process.env.port || 8000;
 
 
 
