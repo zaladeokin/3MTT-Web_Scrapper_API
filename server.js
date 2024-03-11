@@ -3,7 +3,7 @@ var os = require("os");
 const url = require('url'); 
 const { getComments, searchVideo }= require("./scraping");
 
-const hostname = os.hostname();
+const hostname = "web-scrapper-g746.onrender.com";
 const port = process.env.port || 8000;
 
 
