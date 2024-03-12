@@ -1,10 +1,10 @@
 const http= require("http");
-var os = require("os");
+//var os = require("os");
 const url = require('url'); 
 const { getComments, searchVideo }= require("./scraping");
 
-const hostname = "web-scrapper-g746.onrender.com";
-const port = process.env.port || 8000;
+//const hostname = "web-scrapper-g746.onrender.com";
+const PORT = process.env.port || 3000;
 
 
 
@@ -56,6 +56,6 @@ function requestHandler(req, res){
 const server= http.createServer(requestHandler);
 
 //Initiaize server to listen
-server.listen(port, hostname, () => {
+server.listen(PORT, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
