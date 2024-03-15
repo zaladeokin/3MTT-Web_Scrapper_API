@@ -34,14 +34,12 @@ npm start
 - GET /search?keyword=keyword
 search for video with keyword
 
-Parameters
 keyword: Keyword encode with JavaScript function encodeURI(uri).
 
 
 - GET comments?video_url=videoUrl
 Retrieves comments from a YouTube video with the specified videoUrl.
 
-Parameters
 videoUrl: The Url is provided in the response of GET /search?keyword=keyword request. No need to encode, response is pre-formatted.  
 
 

@@ -4,7 +4,7 @@ async function searchVideo(userAgent, url){
     const browser= await puppeteer.launch();
     const page= await browser.newPage();
     await page.setUserAgent(userAgent);
-    await page.goto(url);
+    await page.goto(url, {timeout: 0});
     
     const data= await page.evaluate(async ()=>{
         let data= [];
@@ -35,9 +35,10 @@ async function getComments(userAgent, url){
 
     await page.setUserAgent(userAgent);
 
-    await page.goto(url);
+    await page.goto(url, {timeout: 0});
     
     const data= await page.evaluate(async ()=>{
+        //  window.scrollBy(0,800)
         let data= [];
         const comments= document.querySelectorAll('.ytd-comment-renderer > #comment-content #content');
         for(const comment of comments){
